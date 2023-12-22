@@ -23,6 +23,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: electrolize, "Roboto Light", sans-serif;
+    overflow: hidden;
 }
 
 /* UTILITY */
@@ -34,6 +35,20 @@ body {
 audio {
     display: none;
 }
+
+.slide-in {
+    animation: slide_from_left 0.5s forwards;
+}
+
+@keyframes slide_from_left {
+  from {
+    transform: translateX(100%); /* Move the image outside the container to the left */
+  }
+  to {
+    transform: translateX(0); /* Bring the image back to its original position */
+  }
+}
+
 
 /* Background image and blur effect */
 .blur {
@@ -289,14 +304,10 @@ progress {
     height: 20px; /* Adjust the height as needed */
     border: 1px solid black;
     border-radius: 20px;
+    background-color: black;
 }
 
 /* Health bar color for mozilla and chrome */
-progress {
-    background-color: black;
-    border-radius: 20px;
-}
-
 progress::-moz-progress-bar {
     background-color: darkred !important;
     border-radius: 20px;

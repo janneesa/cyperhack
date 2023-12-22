@@ -102,41 +102,35 @@ document.addEventListener('DOMContentLoaded', async function() {
 place_1.addEventListener('click', async function() {
   player_location = 1
   await set_background(place_1);
-  await set_top_background(place_1)
   setup_fight()
 });
 
 place_2.addEventListener('click', async function() {
   player_location = 2
   await set_background(place_2);
-  await set_top_background(place_2)
   setup_fight()
 });
 
 place_3.addEventListener('click', async function() {
   player_location = 3
   await set_background(place_3);
-  await set_top_background(place_3)
   setup_fight()
 });
 
 place_4.addEventListener('click', async function() {
   player_location = 4
   await set_background(place_4);
-  await set_top_background(place_4)
   setup_fight()
 });
 
 place_5.addEventListener('click', async function() {
   player_location = 5
   await set_background(place_5);
-  await set_top_background(place_5)
   setup_fight()
 });
 
 place_6.addEventListener('click', async function() {
   player_location = 6
   await set_background(place_6);
-  await set_top_background(place_6)
   setup_fight()
 });

@@ -177,7 +177,6 @@ function run_hack() {
 
       hack_roll = Math.floor(
           Math.random() * (20 + (player.int - 10))) + 1;
-      console.log('hack roll' + hack_roll);
       int_dice_1.innerText = `${hack_roll}`;
     }, 50);
   });
@@ -234,7 +233,6 @@ function run_hack2() {
 
       hack_roll = Math.floor(
           Math.random() * (20 + (player.int - 10))) + 1;
-      console.log('hack roll' + hack_roll);
       int_dice_2.innerText = `${hack_roll}`;
     }, 50);
   });
@@ -291,7 +289,6 @@ function run_hack3() {
 
       hack_roll = Math.floor(
           Math.random() * (20 + (player.int - 10))) + 1;
-      console.log('hack roll' + hack_roll);
       int_dice_3.innerText = `${hack_roll}`;
     }, 50);
   });
@@ -348,7 +345,6 @@ function run_hack4() {
 
       hack_roll = Math.floor(
           Math.random() * (20 + (player.int - 10))) + 1;
-      console.log('hack roll' + hack_roll);
       int_dice_4.innerText = `${hack_roll}`;
     }, 50);
   });
@@ -405,7 +401,6 @@ function run_hack5() {
 
       hack_roll = Math.floor(
           Math.random() * (20 + (player.int - 10))) + 1;
-      console.log('hack roll' + hack_roll);
       int_dice_5.innerText = `${hack_roll}`;
     }, 50);
   });
@@ -462,7 +457,6 @@ function run_hack6() {
 
       hack_roll = Math.floor(
           Math.random() * (20 + (player.int - 10))) + 1;
-      console.log('hack roll' + hack_roll);
       int_dice_6.innerText = `${hack_roll}`;
     }, 50);
   });

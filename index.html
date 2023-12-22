@@ -27,7 +27,7 @@ Your browser does not support the audio element.
     <div id="welcome" class="welcome">
         <div id="welcome-box" class="welcome-box">
             <p id="welcome_text">Welcome to</p>
-            <h1>CYPERHACK</h1>
+            <h1 class="slide-in">CYPERHACK</h1>
             <div id="start_menu" class="start_menu">
                 <button id="how_to_play" class="menu_button" onclick="how_to_play()">How to play</button>
                 <button id="start_game" class="menu_button" onclick="start_game()">Start hacking</button>
@@ -35,7 +35,7 @@ Your browser does not support the audio element.
         </div>
     </div>
 
-    <div id="top" class="top">
+    <div id="top" class="top slide-in">
 
         <div id="stats" class="stats">
             <div class="stat">
@@ -59,7 +59,7 @@ Your browser does not support the audio element.
             </div>
         </div>
 
-        <div id="status" class="status flex-row">
+        <div id="status" class="status flex-row slide-in">
             <div class="player-health progress-container">
                 <div class="progress-label">HP: <span id="hp">100</span>/<span id="max_hp">100</span></div>
                 <progress id="player-hp" class="progress-bar" value="100" max="100"></progress>
@@ -72,13 +72,13 @@ Your browser does not support the audio element.
         </div>
 
         <div id="picture-container" class="picture-container flex-row">
-            <div id="player-window" class="character-container player-window"></div>
-            <div id="enemy-window" class="character-container enemy-window"></div>
+            <div id="player-window" class="character-container player-window slide-in"></div>
+            <div id="enemy-window" class="character-container enemy-window slide-in"></div>
         </div>
 
     </div>
 
-    <div id="bottom" class="bottom">
+    <div id="bottom" class="bottom slide-in">
 
         <div id="places-container" class="places-container">
             <div id="places-first-column" class="places-first-column">
@@ -112,7 +112,7 @@ Your browser does not support the audio element.
         </div>
     </div>
 
-    <div id="battle" class="battle">
+    <div id="battle" class="battle slide-in">
         <div id="battle-log" class="battle-log">
             <textarea id="battle_text" class="battle_text" readonly></textarea>
         </div>
@@ -142,7 +142,7 @@ Your browser does not support the audio element.
         </div>
     </div>
 
-    <div id="hack" class="hack" style="display: none">
+    <div id="hack" class="hack slide-in" style="display: none">
         <div id="hack-row-first" class="hack-row-first">
             <div id="hack-box-1" class="hack-box">
                 <h3 id="int-dice-1" class="dice">00</h3>
@@ -173,15 +173,15 @@ Your browser does not support the audio element.
 
     </div>
 
-    <div id="lore" class="lore">
+    <div id="lore" class="lore slide-in">
         <textarea id="lore_text" class="lore_text" readonly></textarea>
     </div>
 
-    <div id="directions" class="directions">
+    <div id="directions" class="directions slide-in">
         <textarea id="how_to_play_text" class="how_to_play_text" readonly></textarea>
     </div>
 
-    <div id="class-selection" class="class-selection">
+    <div id="class-selection" class="class-selection slide-in">
         <h2>Choose Your class</h2>
         <div id="classes-container" class="classes-container">
             <div id="classes-first-column" class="classes-first-column">

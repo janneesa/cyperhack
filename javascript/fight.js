@@ -134,8 +134,6 @@ function continue_fight() {
 
 function get_random_enemy() {
   const random_enemy_index = Math.floor(Math.random() * enemy_list.length);
-  console.log(random_enemy_index);
-  console.log(enemy_list);
   random_enemy = enemy_list[random_enemy_index];
 
   // Remove enemy using splice
@@ -167,8 +165,7 @@ function setup_fight() {
 
   // Get random enemy and set values to html
   get_random_enemy();
-  console.log(random_enemy);
-  console.log(random_enemy.img);
+  console.log('selected random enemy is: ' + random_enemy);
   enemy_window.style.backgroundImage = random_enemy.img;
   enemy_hp_bar.value = random_enemy.hp;
   enemy_hp_bar.max = random_enemy.hp;
@@ -251,7 +248,6 @@ function enemy_turn() {
         }
 
         enemy_con_roll = Math.floor(Math.random() * random_enemy.con / 2) + 1;
-        console.log('dex roll' + con_roll);
         con_dice_element.innerText = `${enemy_con_roll}`;
       }, 50);
     });
@@ -272,7 +268,6 @@ function enemy_turn() {
 
         enemy_dmg_roll = Math.floor(
             Math.random() * (6 + (random_enemy.str - 10))) + 1;
-        console.log('dmg roll' + enemy_dmg_roll);
         str_dice_element.innerText = `${enemy_dmg_roll}`;
       }, 50);
     });
@@ -327,7 +322,6 @@ function enemy_turn() {
         }
 
         enemy_con_roll = Math.floor(Math.random() * random_enemy.con / 2) + 1;
-        console.log('dex roll' + con_roll);
         con_dice_element.innerText = `${enemy_con_roll}`;
       }, 50);
     });
@@ -382,7 +376,6 @@ function enemy_turn() {
           }
 
           enemy_dex_roll = Math.floor(Math.random() * random_enemy.dex) + 1;
-          console.log('dex roll' + enemy_dex_roll);
           dex_dice_element.innerText = `${enemy_dex_roll}`;
         }, 50);
       });
@@ -411,7 +404,6 @@ function enemy_turn() {
               }
 
               dex_roll = Math.floor(Math.random() * player.dex / 2) + 1;
-              console.log('dex roll' + dex_roll);
               dex_dice_element.innerText = `${dex_roll}`;
             }, 50);
           });
@@ -444,7 +436,6 @@ function enemy_turn() {
 
                   enemy_dmg_roll = Math.floor(
                       Math.random() * (6 + (random_enemy.str - 10))) + 1;
-                  console.log('dmg roll' + enemy_dmg_roll);
                   str_dice_element.innerText = `${enemy_dmg_roll}`;
                 }, 50);
               });
@@ -493,7 +484,6 @@ function enemy_turn() {
 
               enemy_dmg_roll = Math.floor(
                   Math.random() * (6 + (random_enemy.str - 10))) + 1;
-              console.log('dmg roll' + enemy_dmg_roll);
               str_dice_element.innerText = `${enemy_dmg_roll}`;
             }, 50);
           });
@@ -539,7 +529,6 @@ function enemy_turn() {
 
               enemy_dmg_roll = Math.floor(
                   Math.random() * (6 + (random_enemy.str - 10))) + 1;
-              console.log('dmg roll' + enemy_dmg_roll);
               str_dice_element.innerText = `${enemy_dmg_roll * 2}`;
             }, 50);
           });
@@ -599,7 +588,6 @@ function attack() {
       }
 
       dex_roll = Math.floor(Math.random() * player.dex) + 1;
-      console.log('dex roll' + dex_roll);
       dex_dice_element.innerText = `${dex_roll}`;
     }, 50);
   });
@@ -646,7 +634,6 @@ function attack() {
 
                 dmg_roll = Math.floor(Math.random() * (6 + (player.str - 10))) +
                     1;
-                console.log('dmg roll' + dmg_roll);
                 str_dice_element.innerText = `${dmg_roll}`;
               }, 50);
             });
@@ -697,7 +684,6 @@ function attack() {
               }
 
               dmg_roll = Math.floor(Math.random() * (6 + (player.str - 10))) + 1;
-              console.log('dmg roll' + dmg_roll);
               str_dice_element.innerText = `${dmg_roll}`;
             }, 50);
           });
@@ -744,7 +730,6 @@ function attack() {
               }
 
               dmg_roll = Math.floor(Math.random() * (6 + (player.str - 10))) + 1;
-              console.log('dmg roll' + dmg_roll);
               str_dice_element.innerText = `${dmg_roll * 2}`;
             }, 50);
           });
@@ -824,7 +809,6 @@ function charge() {
       }
 
       con_roll = Math.floor(Math.random() * player.con / 2) + 1;
-      console.log('dex roll' + con_roll);
       con_dice_element.innerText = `${con_roll}`;
     }, 50);
   });
@@ -844,7 +828,6 @@ function charge() {
       }
 
       dmg_roll = Math.floor(Math.random() * (6 + (player.str - 10))) + 1;
-      console.log('dmg roll' + dmg_roll);
       str_dice_element.innerText = `${dmg_roll}`;
     }, 50);
   });
@@ -902,7 +885,6 @@ function heal() {
       }
 
       con_roll = Math.floor(Math.random() * (player.con / 2)) + 1;
-      console.log('con roll' + con_roll);
       con_dice_element.innerText = `${con_roll}`;
     }, 50);
   });

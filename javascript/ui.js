@@ -41,26 +41,47 @@ function start_game() {
 // Set background in event listener when clicked
 async function set_background(place) {
   const computed_style = window.getComputedStyle(place);
-  const background_image = computed_style.getPropertyValue('background-image').replace(/^url\(['"]?([^'"]*)['"]?\)$/, '$1');
+  const background_image = computed_style.getPropertyValue('background-image').
+    replace(/^url\(['"]?([^'"]*)['"]?\)$/, '$1');
 
-  // Set the retrieved image URL as the background of background_blur
-  background_blur.style.backgroundImage = `url('${background_image}')`;
-  background_blur.style.backgroundPosition = 'center center';
-  background_blur.style.backgroundSize = 'cover';
-  background_blur.style.backgroundRepeat = 'no-repeat';
-}
-
-// Set top_bar background image
-async function set_top_background(place) {
-  const computed_style = window.getComputedStyle(place);
-  const background_image = computed_style.getPropertyValue('background-image').replace(/^url\(['"]?([^'"]*)['"]?\)$/, '$1');
-  console.log(background_image)
-
-  // Set the retrieved image URL as the background of background_blur
+  // Set the retrieved image URL as the background of top_bar
+  top_bar.style.transition = 'background-image 0.25s ease-in-out';
   top_bar.style.backgroundImage = `url('${background_image}')`;
   top_bar.style.backgroundPosition = 'center center';
   top_bar.style.backgroundSize = 'cover';
   top_bar.style.backgroundRepeat = 'no-repeat';
+
+  // Set the retrieved image URL as the background of background_blur
+  background_blur.style.transition = 'background-image 0.25s ease-in-out';
+  background_blur.style.backgroundImage = `url('${background_image}')`;
+  background_blur.style.backgroundPosition = 'center center';
+  background_blur.style.backgroundSize = 'cover';
+  background_blur.style.backgroundRepeat = 'no-repeat';
+
+  // Wait for the transition to complete before removing the transition property
+  await new Promise(resolve => setTimeout(resolve, 250));
+
+  top_bar.style.transition = 'none';
+  background_blur.style.transition = 'none';
+}
+
+// Currently unused the on higher handles both
+async function set_top_background(place) {
+  const computed_style = window.getComputedStyle(place);
+  const background_image = computed_style.getPropertyValue('background-image').
+    replace(/^url\(['"]?([^'"]*)['"]?\)$/, '$1');
+  console.log('This is background image route that\'s used: ' + background_image);
+
+  // Set the retrieved image URL as the background of background_blur
+  top_bar.style.transition = 'background-image 0.5s ease-in-out';
+  top_bar.style.backgroundImage = `url('${background_image}')`;
+  top_bar.style.backgroundPosition = 'center center';
+  top_bar.style.backgroundSize = 'cover';
+  top_bar.style.backgroundRepeat = 'no-repeat';
+
+  // Wait for the transition to complete before removing the transition property
+  await new Promise(resolve => setTimeout(resolve, 500));
+  top_bar.style.transition = 'none';
 }
 
 async function randomize_locations() {
@@ -216,7 +237,7 @@ function randomize_places() {
   } finally {
     place_1.innerText = all_places[random_place].name;
     all_places.splice(random_place, 1);
-    console.log(all_places.length);
+    console.log('remaining amount of unused places: ' + all_places.length);
   }
 
   // Place 2
@@ -248,7 +269,7 @@ function randomize_places() {
   } finally {
     place_2.innerText = all_places[random_place].name;
     all_places.splice(random_place, 1);
-    console.log(all_places.length);
+    console.log('remaining amount of unused places: ' + all_places.length);
   }
 
   // Place 3
@@ -280,7 +301,7 @@ function randomize_places() {
   } finally {
     place_3.innerText = all_places[random_place].name;
     all_places.splice(random_place, 1);
-    console.log(all_places.length);
+    console.log('remaining amount of unused places: ' + all_places.length);
   }
 
   // Place 4
@@ -312,7 +333,7 @@ function randomize_places() {
   } finally {
     place_4.innerText = all_places[random_place].name;
     all_places.splice(random_place, 1);
-    console.log(all_places.length);
+    console.log('remaining amount of unused places: ' + all_places.length);
   }
 
   // Place 5
@@ -344,7 +365,7 @@ function randomize_places() {
   } finally {
     place_5.innerText = all_places[random_place].name;
     all_places.splice(random_place, 1);
-    console.log(all_places.length);
+    console.log('remaining amount of unused places: ' + all_places.length);
   }
 
   // Place 6
@@ -376,7 +397,8 @@ function randomize_places() {
   } finally {
     place_6.innerText = all_places[random_place].name;
     all_places.splice(random_place, 1);
-    console.log(all_places.length);
+    console.log('remaining amount of unused places: ' + all_places.length);
   }
 
 }
+
