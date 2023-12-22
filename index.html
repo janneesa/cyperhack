@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../cyperhack/style.css" rel="stylesheet">
+    <script src="../cyperhack/javascript/main.js" defer></script>
+    <script src="../cyperhack/javascript/ui.js" defer></script>
+    <script src="../cyperhack/javascript/charaters.js" defer></script>
+    <script src="../cyperhack/javascript/enemies.js" defer></script>
+    <script src="../cyperhack/javascript/fight.js" defer></script>
+    <script src="../cyperhack/javascript/hack.js" defer></script>
+    <title>cyperhack</title>
+</head>
+ <audio controls autoplay loop>
+  <source src="../cyperhack/audio/melodic-techno-03-extended-version-moogify-9867.mp3" type="audio/ogg">
+Your browser does not support the audio element.
+</audio>
+<body>
+
+<div id="background" class="blur"></div>
+
+<div class="container">
+
+    <div id="welcome" class="welcome">
+        <div id="welcome-box" class="welcome-box">
+            <p id="welcome_text">Welcome to</p>
+            <h1>CYPERHACK</h1>
+            <div id="start_menu" class="start_menu">
+                <button id="how_to_play" class="menu_button" onclick="how_to_play()">How to play</button>
+                <button id="start_game" class="menu_button" onclick="start_game()">Start hacking</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="top" class="top">
+
+        <div id="stats" class="stats">
+            <div class="stat">
+                <label>STR:</label>
+                | <span id="strength">99</span> |
+            </div>
+
+            <div class="stat">
+                <label>DEX:</label>
+                | <span id="dexterity">99</span> |
+            </div>
+
+            <div class="stat">
+                <label>CON:</label>
+                | <span id="constitution">99</span> |
+            </div>
+
+            <div class="stat">
+                <label>INT:</label>
+                | <span id="intelligence">99</span> |
+            </div>
+        </div>
+
+        <div id="status" class="status flex-row">
+            <div class="player-health progress-container">
+                <div class="progress-label">HP: <span id="hp">100</span>/<span id="max_hp">100</span></div>
+                <progress id="player-hp" class="progress-bar" value="100" max="100"></progress>
+            </div>
+
+            <div id="enemy-status" class="enemy-health progress-container">
+                <div class="progress-label">HP: <span id="enemy_hp">50</span>/<span id="enemy_hp_max">100</span></div>
+                <progress id="enemy-hp" class="progress-bar" value="50" max="100"></progress>
+            </div>
+        </div>
+
+        <div id="picture-container" class="picture-container flex-row">
+            <div id="player-window" class="character-container player-window"></div>
+            <div id="enemy-window" class="character-container enemy-window"></div>
+        </div>
+
+    </div>
+
+    <div id="bottom" class="bottom">
+
+        <div id="places-container" class="places-container">
+            <div id="places-first-column" class="places-first-column">
+                <div class="place-box">
+                    <button id="place-1" class="place-button">Club</button>
+                </div>
+
+                <div class="place-box">
+                    <button id="place-3" class="place-button">Garden</button>
+                </div>
+
+
+                <div class="place-box">
+                    <button id="place-5" class="place-button">Mall</button>
+                </div>
+            </div>
+
+            <div id="places-second-column" class="places-second-column">
+                <div class="place-box">
+                    <button id="place-2" class="place-button">East slum</button>
+                </div>
+
+                <div class="place-box">
+                    <button id="place-4" class="place-button">West slum</button>
+                </div>
+
+                <div class="place-box">
+                    <button id="place-6" class="place-button">Mid town</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="battle" class="battle">
+        <div id="battle-log" class="battle-log">
+            <textarea id="battle_text" class="battle_text" readonly></textarea>
+        </div>
+        <div id="dex-dmg" class="dex-dmg">
+            <p>DEX</p>
+            <p>DMG</p>
+            <p>CON</p>
+        </div>
+
+        <div id="dice-window" class="dice-window">
+            <div id="dex-box" class="dice-box">
+                <h3 id="dex_dice" class="dice">99</h3>
+            </div>
+            <div id="str-box" class="dice-box">
+                <h3 id="str_dice" class="dice">99</h3>
+            </div>
+            <div id="con-box" class="dice-box">
+                <h3 id="con_dice" class="dice">99</h3>
+            </div>
+        </div>
+        <div id="battle-menu" class="battle-menu">
+            <button id="attack" class="battle-button" onclick="attack()">ATTACK</button>
+            <button id="charge" class="battle-button" onclick="begin_charge()">CHARGE</button>
+            <button id="heal" class="battle-button" onclick="heal()">HEAL</button>
+            <button id="skills" class="battle-button">SKILLS</button>
+            <button id="continue" class="battle-button" style="display: none" onclick="continue_fight()">CONTINUE</button>
+        </div>
+    </div>
+
+    <div id="hack" class="hack" style="display: none">
+        <div id="hack-row-first" class="hack-row-first">
+            <div id="hack-box-1" class="hack-box">
+                <h3 id="int-dice-1" class="dice">00</h3>
+            </div>
+            <div id="hack-box-2" class="hack-box">
+                <h3 id="int-dice-2" class="dice">00</h3>
+            </div>
+            <div id="hack-box-3" class="hack-box">
+                <h3 id="int-dice-3" class="dice">00</h3>
+            </div>
+        </div>
+        <div id="hack-row-second" class="hack-row-second">
+            <div id="hack-box-4" class="hack-box">
+                <h3 id="int-dice-4" class="dice">00</h3>
+            </div>
+            <div id="hack-box-5" class="hack-box">
+                <h3 id="int-dice-5" class="dice">00</h3>
+            </div>
+            <div id="hack-box-6" class="hack-box">
+                <h3 id="int-dice-6" class="dice">00</h3>
+            </div>
+        </div>
+        <div id="hack-buttons" class="hack-buttons">
+            <button id="begin-hack" class="battle-button" onclick="run_hack()">HACK</button>
+            <button id="hack-skills" class="battle-button">SKILLS</button>
+            <button id="to-map-button" class="battle-button" onclick="back_to_map()">TO MAP</button>
+        </div>
+
+    </div>
+
+    <div id="lore" class="lore">
+        <textarea id="lore_text" class="lore_text" readonly></textarea>
+    </div>
+
+    <div id="directions" class="directions">
+        <textarea id="how_to_play_text" class="how_to_play_text" readonly></textarea>
+    </div>
+
+    <div id="class-selection" class="class-selection">
+        <h2>Choose Your class</h2>
+        <div id="classes-container" class="classes-container">
+            <div id="classes-first-column" class="classes-first-column">
+                <h3>Assassin</h3>
+                <div class="class-box">
+                    <button id="class-1" value="assassin" class="class-button"></button>
+                </div>
+                <p>| STR 10 | DEX 14 |</p>
+                <p>| CON 10 | INT 12 |</p>
+
+                <div class="empty-space"></div>
+
+                <h3>Fighter</h3>
+                <div class="class-box">
+                    <button id="class-2" value="fighter" class="class-button"></button>
+                </div>
+                <p>| STR 12 | DEX 14 |</p>
+                <p>| CON 12 | INT 8 |</p>
+            </div>
+
+            <div id="classes-second-column" class="classes-second-column">
+                <h3>Hacker</h3>
+                <div class="class-box">
+                    <button id="class-3" value="hacker" class="class-button"></button>
+                </div>
+                <p>| STR 10 | DEX 12 |</p>
+                <p>| CON 10 | INT 16 |</p>
+
+                <div class="empty-space"></div>
+
+                <h3>Tank</h3>
+                <div class="class-box">
+                    <button id="class-4" value="tank" class="class-button"></button>
+                </div>
+                <p>| STR 14 | DEX 10 |</p>
+                <p>| CON 14 | INT 8 |</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
