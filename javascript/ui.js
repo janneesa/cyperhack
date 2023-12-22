@@ -41,15 +41,10 @@ function start_game() {
 // Set background in event listener when clicked
 async function set_background(place) {
   const computed_style = window.getComputedStyle(place);
-  const background_style = computed_style.getPropertyValue('background');
-  console.log(background_style);
-
-  // Cleanup the URL string
-  const background_settings = background_style.split(' ');
-  console.log(background_settings);
+  const background_image = computed_style.getPropertyValue('background-image').replace(/^url\(['"]?([^'"]*)['"]?\)$/, '$1');
 
   // Set the retrieved image URL as the background of background_blur
-  background_blur.style.background = `${background_settings[0]}`;
+  background_blur.style.backgroundImage = `url('${background_image}')`;
   background_blur.style.backgroundPosition = 'center center';
   background_blur.style.backgroundSize = 'cover';
   background_blur.style.backgroundRepeat = 'no-repeat';
@@ -58,15 +53,11 @@ async function set_background(place) {
 // Set top_bar background image
 async function set_top_background(place) {
   const computed_style = window.getComputedStyle(place);
-  const background_style = computed_style.getPropertyValue('background');
-  console.log(background_style);
-
-  // Cleanup the URL string
-  const background_settings = background_style.split(' ');
-  console.log(background_settings);
+  const background_image = computed_style.getPropertyValue('background-image').replace(/^url\(['"]?([^'"]*)['"]?\)$/, '$1');
+  console.log(background_image)
 
   // Set the retrieved image URL as the background of background_blur
-  top_bar.style.backgroundImage = background_settings[0];
+  top_bar.style.backgroundImage = `url('${background_image}')`;
   top_bar.style.backgroundPosition = 'center center';
   top_bar.style.backgroundSize = 'cover';
   top_bar.style.backgroundRepeat = 'no-repeat';
