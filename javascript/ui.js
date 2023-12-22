@@ -194,6 +194,15 @@ const upper_town = {
   'img4': 'url("../cyperhack/images/places/upper_town4.png")',
 };
 
+const tower = {
+  'number': 8,
+  'name': 'Tower',
+  'img1': 'url("../cyperhack/images/places/tower1.png")',
+  'img2': 'url("../cyperhack/images/places/tower2.png")',
+  'img3': 'url("../cyperhack/images/places/tower3.png")',
+  'img4': 'url("../cyperhack/images/places/tower4.png")',
+};
+
 const all_places = [
   casino,
   club,
@@ -398,6 +407,35 @@ function randomize_places() {
     place_6.innerText = all_places[random_place].name;
     all_places.splice(random_place, 1);
     console.log('remaining amount of unused places: ' + all_places.length);
+  }
+
+  // Place 7 aka Tower
+  try {
+    random_image = Math.floor(Math.random() * 4) + 1;
+
+    if (random_image === 1) {
+      place_7.style.background = tower.img1;
+      place_7.style.backgroundPosition = 'center center';
+      place_7.style.backgroundSize = 'cover';
+      place_7.style.backgroundRepeat = 'no-repeat';
+    } else if (random_image === 2) {
+      place_7.style.background = tower.img2;
+      place_7.style.backgroundPosition = 'center center';
+      place_7.style.backgroundSize = 'cover';
+      place_7.style.backgroundRepeat = 'no-repeat';
+    } else if (random_image === 3) {
+      place_7.style.background = tower.img3;
+      place_7.style.backgroundPosition = 'center center';
+      place_7.style.backgroundSize = 'cover';
+      place_7.style.backgroundRepeat = 'no-repeat';
+    } else if (random_image === 4) {
+      place_7.style.background = tower.img4;
+      place_7.style.backgroundPosition = 'center center';
+      place_7.style.backgroundSize = 'cover';
+      place_7.style.backgroundRepeat = 'no-repeat';
+    }
+  } finally {
+    place_7.innerText = tower.name;
   }
 
 }

@@ -11,6 +11,12 @@ function win_condition_check() {
   if (total_wins > 2) {
     // VICTORY HERE
     console.log('VICTORY')
+
+    document.getElementById('places-first-column').style.display = 'none';
+    document.getElementById('places-second-column').style.display = 'none';
+
+    document.getElementById('final-place').style.display = 'flex'
+
   }
   else if (total_losses > 2) {
     // GAME OVER HERE

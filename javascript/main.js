@@ -72,6 +72,7 @@ const place_3 = document.getElementById('place-3');
 const place_4 = document.getElementById('place-4');
 const place_5 = document.getElementById('place-5');
 const place_6 = document.getElementById('place-6');
+const place_7 = document.getElementById('place-7');
 // Background
 const background_blur = document.getElementById('background');
 
@@ -136,4 +137,9 @@ place_6.addEventListener('click', async function() {
   player_location = 6
   await set_background(place_6);
   setup_fight()
+});
+
+place_7.addEventListener('click', async function() {
+  player_location = 7
+  await set_background(place_7);
 });

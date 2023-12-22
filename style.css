@@ -383,6 +383,18 @@ progress::-webkit-progress-value {
     border-radius: 8px;
 }
 
+.final-place-box {
+    margin: 5px;
+    flex: 1;
+    width: 96%;
+    height: 96%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, darkred, darkviolet);
+    border-radius: 8px;
+}
+
 .place-button {
     width: 98%;
     height: 98%;
@@ -436,6 +448,14 @@ progress::-webkit-progress-value {
 }
 
 #place-6 {
+    background: url("../cyperhack/images/places/mid_town2.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+}
+
+#place-7 {
     background: url("../cyperhack/images/places/mid_town2.png");
     background-position: center center;
     background-size: cover;
