@@ -12,6 +12,7 @@
     <script src="../cyperhack/javascript/enemies.js" defer></script>
     <script src="../cyperhack/javascript/fight.js" defer></script>
     <script src="../cyperhack/javascript/hack.js" defer></script>
+    <script src="../cyperhack/javascript/combat_skills.js" defer></script>
     <title>cyperhack</title>
 </head>
  <audio controls autoplay loop>
@@ -137,8 +138,12 @@ Your browser does not support the audio element.
             <button id="attack" class="battle-button" onclick="attack()">ATTACK</button>
             <button id="charge" class="battle-button" onclick="begin_charge()">CHARGE</button>
             <button id="heal" class="battle-button" onclick="heal()">HEAL</button>
-            <button id="skills" class="battle-button">SKILLS</button>
+            <button id="skills" class="battle-button" onclick="show_combat_skills()">SKILLS</button>
             <button id="continue" class="battle-button" style="display: none" onclick="continue_fight()">CONTINUE</button>
+
+            <button id="assassin-backstab" class="battle-button skill-button" name="assassin" style="display: none" onclick="assassin_backstab()">BACKSTAB</button>
+
+            <button id="return" class="battle-button" style="display: none" onclick="return_button()">RETURN</button>
         </div>
     </div>
 

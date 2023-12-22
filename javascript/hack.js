@@ -156,6 +156,8 @@ function win_hack() {
   player.hp = player_hp_bar.max;
   player_hp_bar.value = player.hp;
   player_hp.innerText = player.hp;
+
+  player.skill = player.skill_max
 }
 
 function run_hack() {

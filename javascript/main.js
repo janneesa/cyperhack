@@ -45,6 +45,8 @@ const heal_button = document.getElementById('heal')
 const skills_button = document.getElementById('skills')
 const continue_button = document.getElementById('continue')
 const dex_dmg_con_line = document.getElementById('dex-dmg')
+const return_to_battle_menu_button = document.getElementById('return')
+const all_skill_buttons = document.querySelectorAll('.skill-button')
 // Hack
 const hack_screen = document.getElementById('hack')
 const begin_hack_button = document.getElementById('begin-hack')
