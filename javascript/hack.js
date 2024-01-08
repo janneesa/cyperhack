@@ -20,10 +20,10 @@ function win_condition_check() {
   }
   else if (total_losses > 2) {
     // GAME OVER HERE
-    console.log('GAME OVER')
+    alert('You have lost too many hacks. You Lose.')
   }
   else {
-    console.log('Hack more to win')
+    alert('Good job! now go hack more.')
   }
 }
 

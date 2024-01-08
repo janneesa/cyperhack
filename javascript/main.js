@@ -36,6 +36,9 @@ const con_dice_element = document.getElementById('con_dice')
 const dex_dice_box = document.getElementById('dex-box')
 const str_dice_box = document.getElementById('str-box')
 const con_dice_box = document.getElementById('con-box')
+const dialogue_friendly = document.getElementById('dialogue-friendly')
+const dialogue_pic_friendly = document.getElementById('dialogue-pic-friendly')
+const dialogue_chat = document.getElementById('chat-text')
 // Battle
 const battle = document.getElementById('battle')
 const hack = document.getElementById('hack')
@@ -75,6 +78,7 @@ const place_6 = document.getElementById('place-6');
 const place_7 = document.getElementById('place-7');
 // Background
 const background_blur = document.getElementById('background');
+const container = document.querySelector('.container')
 
 // Variables
 let player

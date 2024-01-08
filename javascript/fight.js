@@ -11,8 +11,6 @@ const enemy_list = [
 
 let random_enemy; // Random enemy gets uploaded to here
 
-let boss_enemy = boss;
-
 let dex_roll;
 
 let dmg_roll;
@@ -106,7 +104,12 @@ function continue_fight() {
     document.body.style.pointerEvents = 'auto';
     player_window.style.filter = 'none';
     enemy_window.style.filter = 'none';
-    show_hack_screen();
+    if (random_enemy.name === 'boss') {
+      // Game ending here
+      alert('Congratulations you have won')
+    } else {
+      show_hack_screen();
+    }
   } else if (charge_toggle > 1) {
     enemy_turn();
   } else if (charge_toggle > 0) {
@@ -133,12 +136,17 @@ function continue_fight() {
 }
 
 function get_random_enemy() {
-  const random_enemy_index = Math.floor(Math.random() * enemy_list.length);
-  random_enemy = enemy_list[random_enemy_index];
 
-  // Remove enemy using splice
-  enemy_list.splice(random_enemy_index, 1);
-  console.log('enemies left: ' + enemy_list.length);
+  if (total_wins > 2) {
+    random_enemy = boss;
+  } else {
+    const random_enemy_index = Math.floor(Math.random() * enemy_list.length);
+    random_enemy = enemy_list[random_enemy_index];
+
+    // Remove enemy using splice
+    enemy_list.splice(random_enemy_index, 1);
+    console.log('enemies left: ' + enemy_list.length);
+  }
 
   return random_enemy;
 }
@@ -174,6 +182,10 @@ function setup_fight() {
 
   // Fight log
   battle_text.value = `-You are fighting against ${random_enemy.name}`;
+
+  // First battle dialogue
+
+
 }
 
 function show_hack_screen() {

@@ -463,6 +463,58 @@ progress::-webkit-progress-value {
     border-radius: 8px;
 }
 
+.dialogue-firendly {
+    display: none;
+    flex-direction: row;
+    position: absolute;
+    bottom: 15vh;
+    height:40vh;
+    width: 100vw;
+    z-index: 998;
+}
+
+#chat-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.chat-box {
+    height: 15vh;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.chat-text {
+    background: none;
+    width: 93%;
+    height: 100%;
+    text-align: left;
+    font-size: 1rem;
+    color: white;
+    align-self: center;
+    resize: none;
+    outline: none;
+    border-radius: 7px;
+    padding-inline: 10px;
+    background: rgba(0, 0, 0, 90%);
+}
+
+.dialogue-pic-friendly {
+    height: 25vh;
+    width: 100vw;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url("../cyperhack/images/ui/leader.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 999;
+}
+
 .battle {
     display: flex;
     flex-direction: column;
