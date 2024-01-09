@@ -9,22 +9,20 @@ let hack_victory = 0;
 
 function win_condition_check() {
   if (total_wins > 2) {
-    // VICTORY HERE
-    console.log('VICTORY')
 
     document.getElementById('places-first-column').style.display = 'none';
     document.getElementById('places-second-column').style.display = 'none';
 
     document.getElementById('final-place').style.display = 'flex'
 
+    win_condition_true()
+
   }
   else if (total_losses > 2) {
     // GAME OVER HERE
-    alert('You have lost too many hacks. You Lose.')
+    lost_three_hacks()
   }
-  else {
-    alert('Good job! now go hack more.')
-  }
+
 }
 
 function back_to_map() {
@@ -34,6 +32,11 @@ function back_to_map() {
   try {
 
     if (hack_victory === 1) {
+
+      if (total_wins + total_losses === 1) {
+        after_hack_win()
+      }
+
       if (player_location === 1) {
         place_1.style.pointerEvents = 'none';
         place_1.innerText = '01';
@@ -66,6 +69,11 @@ function back_to_map() {
         place_6.style.filter = 'grayscale(100%)';
       }
     } else if (hack_victory === 0) {
+
+      if (total_wins + total_losses === 1) {
+        after_hack_lost()
+      }
+
       if (player_location === 1) {
         place_1.style.pointerEvents = 'none';
         place_1.innerText = '00';

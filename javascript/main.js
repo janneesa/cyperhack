@@ -39,6 +39,7 @@ const con_dice_box = document.getElementById('con-box')
 const dialogue_friendly = document.getElementById('dialogue-friendly')
 const dialogue_pic_friendly = document.getElementById('dialogue-pic-friendly')
 const dialogue_chat = document.getElementById('chat-text')
+const dialogue_pic = document.getElementById('dialogue-pic-friendly')
 // Battle
 const battle = document.getElementById('battle')
 const hack = document.getElementById('hack')
@@ -146,4 +147,5 @@ place_6.addEventListener('click', async function() {
 place_7.addEventListener('click', async function() {
   player_location = 7
   await set_background(place_7);
+  boss_dialogue()
 });

@@ -37,6 +37,7 @@ let enemy_turn_toggle = 0;
 
 function set_buttons_off() {
   document.body.style.pointerEvents = 'none';
+  battle.style.pointerEvents = 'none'
   attack_button.style.backgroundColor = 'grey';
   charge_button.style.backgroundColor = 'grey';
   heal_button.style.backgroundColor = 'grey';
@@ -46,6 +47,7 @@ function set_buttons_off() {
 
 function set_buttons_on() {
   document.body.style.pointerEvents = 'auto';
+  battle.style.pointerEvents = 'auto'
   attack_button.style.backgroundColor = 'red';
   charge_button.style.backgroundColor = 'red';
   heal_button.style.backgroundColor = 'red';
@@ -98,7 +100,7 @@ function continue_fight() {
   if (player.hp < 1) {
     // GAME OVER
     document.body.style.pointerEvents = 'auto';
-    location.reload();
+    game_over()
   } else if (random_enemy.hp < 1) {
     // You win fight
     document.body.style.pointerEvents = 'auto';
@@ -106,7 +108,7 @@ function continue_fight() {
     enemy_window.style.filter = 'none';
     if (random_enemy.name === 'boss') {
       // Game ending here
-      alert('Congratulations you have won')
+      last_dialogue()
     } else {
       show_hack_screen();
     }
@@ -184,7 +186,9 @@ function setup_fight() {
   battle_text.value = `-You are fighting against ${random_enemy.name}`;
 
   // First battle dialogue
-
+  if (total_wins === 0 && total_losses === 0) {
+    first_battle()
+  }
 
 }
 
@@ -215,6 +219,11 @@ function show_hack_screen() {
   int_dice_6.style.color = 'yellowgreen';
   hack_box_6.style.border = '3px solid white';
   int_dice_6.innerText = '00';
+
+  // First hack dialogue
+  if (total_wins === 0 && total_losses === 0) {
+    first_hack()
+  }
 }
 
 function enemy_turn() {
