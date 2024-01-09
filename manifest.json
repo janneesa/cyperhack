@@ -1,0 +1,24 @@
+{
+  "name": "cyperhack",
+  "short_name": "cyperhack",
+  "start_url": "/",
+  "scope": ".",
+  "theme_color": "#8d0fa3",
+  "background_color": "#8d0fa3",
+  "display": "standalone",
+  "icons":[
+    {
+      "src":"../cyperhack/images/ui/logo192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src":"../cyperhack/images/ui/logo512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+
+}
