@@ -1,7 +1,8 @@
 {
   "name": "cyperhack",
   "short_name": "cyperhack",
-  "start_url": "../cyperhack/indext.html",
+  "start_url": "/",
+  "scope": "/",
   "theme_color": "#8d0fa3",
   "background_color": "#8d0fa3",
   "display_override": [
@@ -13,43 +14,14 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "/images/ui/logo192.png",
+      "src": "static/logo192.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     },
     {
-      "src": "/images/ui/logo512.png",
+      "src": "static/logo512.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "/images/ui/screenshot1.png",
-      "sizes": "750x1334",
-      "type": "image/png",
-      "label": "screenshot",
-      "formfactor": "narrow"
-    },
-    {
-      "src": "/images/ui/screenshot2.png",
-      "sizes": "750x1334",
-      "type": "image/png",
-      "label": "screenshot"
-    },
-    {
-      "src": "/images/ui/screenshot3.png",
-      "sizes": "750x1334",
-      "type": "image/png",
-      "label": "screenshot"
-    },
-    {
-      "src": "/images/ui/screenshot4.png",
-      "sizes": "750x1334",
-      "type": "image/png",
-      "label": "screenshot"
+      "type": "image/png"
     }
   ]
 }
