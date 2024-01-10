@@ -97,9 +97,9 @@ const punk2 = {
 const security_bot = {
   'name': 'security_bot',
   'class': 'security_bot',
-  'hp': 20,
+  'hp': 18,
   'temp_hp': 0,
-  'str': 14, //Half of this
+  'str': 12, //Half of this
   'dex': 10,
   'con': 10,
   'int': 4, //Half of this
@@ -116,4 +116,16 @@ const thief1 = {
   'con': 8,
   'int': 10, //Half of this
   'img': 'url("../cyperhack/images/enemies/thief1.png")'
+}
+
+const ai_geisha = {
+  'name': 'ai_geisha',
+  'class': 'ai_geisha',
+  'hp': 12,
+  'temp_hp': 0,
+  'str': 10, //Half of this
+  'dex': 10,
+  'con': 8,
+  'int': 12, //Half of this
+  'img': 'url("../cyperhack/images/enemies/ai_geisha.png")'
 }

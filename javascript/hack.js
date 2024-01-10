@@ -117,14 +117,12 @@ function back_to_map() {
 function set_hack_buttons_off() {
   document.body.style.pointerEvents = 'none';
   begin_hack_button.style.backgroundColor = 'grey';
-  hack_skills_button.style.backgroundColor = 'grey';
   to_map_button.style.backgroundColor = 'grey';
 }
 
 function set_hack_buttons_on() {
   document.body.style.pointerEvents = 'auto';
   begin_hack_button.style.backgroundColor = 'red';
-  hack_skills_button.style.backgroundColor = 'red';
   to_map_button.style.backgroundColor = 'red';
 }
 
@@ -142,7 +140,6 @@ function lose_hack() {
   int_dice_6.style.color = 'red';
   hack_box_6.style.border = '3px solid red';
   begin_hack_button.style.display = 'none';
-  hack_skills_button.style.display = 'none';
   to_map_button.style.display = 'flex';
   hack_victory = 0;
   total_losses += 1
@@ -162,7 +159,6 @@ function win_hack() {
   int_dice_6.style.color = 'yellowgreen';
   hack_box_6.style.border = '3px solid forestgreen';
   begin_hack_button.style.display = 'none';
-  hack_skills_button.style.display = 'none';
   to_map_button.style.display = 'flex';
   hack_victory = 1;
   total_wins += 1

@@ -7,7 +7,8 @@ const enemy_list = [
   punk1,
   punk2,
   security_bot,
-  thief1];
+  thief1,
+  ai_geisha];
 
 let random_enemy; // Random enemy gets uploaded to here
 
@@ -198,7 +199,6 @@ function show_hack_screen() {
   battle.style.display = 'none';
   hack.style.display = 'flex';
   begin_hack_button.style.display = 'flex';
-  hack_skills_button.style.display = 'flex';
   to_map_button.style.display = 'none';
 
   int_dice_1.style.color = 'yellowgreen';

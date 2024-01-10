@@ -203,6 +203,33 @@ const tower = {
   'img4': 'url("../cyperhack/images/places/tower4.png")',
 };
 
+const temple = {
+  'number': 9,
+  'name': 'Temple',
+  'img1': 'url("../cyperhack/images/places/temple1.png")',
+  'img2': 'url("../cyperhack/images/places/temple2.png")',
+  'img3': 'url("../cyperhack/images/places/temple3.png")',
+  'img4': 'url("../cyperhack/images/places/temple4.png")',
+};
+
+const spa = {
+  'number': 10,
+  'name': 'Spa',
+  'img1': 'url("../cyperhack/images/places/spa1.png")',
+  'img2': 'url("../cyperhack/images/places/spa2.png")',
+  'img3': 'url("../cyperhack/images/places/spa3.png")',
+  'img4': 'url("../cyperhack/images/places/spa4.png")',
+};
+
+const restaurant = {
+  'number': 11,
+  'name': 'Restaurant',
+  'img1': 'url("../cyperhack/images/places/restaurant1.png")',
+  'img2': 'url("../cyperhack/images/places/restaurant2.png")',
+  'img3': 'url("../cyperhack/images/places/restaurant3.png")',
+  'img4': 'url("../cyperhack/images/places/restaurant4.png")',
+};
+
 const all_places = [
   casino,
   club,
@@ -211,7 +238,10 @@ const all_places = [
   lower_town,
   mall,
   mid_town,
-  upper_town];
+  upper_town,
+  temple,
+  spa,
+  restaurant];
 
 function randomize_places() {
   let random_image;

@@ -468,7 +468,7 @@ progress::-webkit-progress-value {
     flex-direction: row;
     position: absolute;
     bottom: 15vh;
-    height:40vh;
+    height:60vh;
     width: 100vw;
     z-index: 998;
 }
@@ -479,7 +479,7 @@ progress::-webkit-progress-value {
 }
 
 .chat-box {
-    height: 15vh;
+    height: 30vh;
     width: 100vw;
     position: absolute;
     bottom: 0;
@@ -503,7 +503,7 @@ progress::-webkit-progress-value {
 }
 
 .dialogue-pic-friendly {
-    height: 25vh;
+    height: 30vh;
     width: 100vw;
     position: absolute;
     right: 0;
