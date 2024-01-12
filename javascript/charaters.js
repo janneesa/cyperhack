@@ -1,7 +1,7 @@
 const assassin = {
   'name': 'assassin',
   'class': 'assassin',
-  'hp': 999,
+  'hp': 20,
   'skill': 1,
   'skill_max': 1,
   'str': 10,

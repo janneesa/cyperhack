@@ -22,6 +22,8 @@ dialogue_friendly.addEventListener('click', async function() {
   } else if (dialogue_counter === 9) {
     first_hack_part2();
   } else if (dialogue_counter === 10) {
+    level_up_dialogue();
+  } else if (dialogue_counter === 11) {
     turn_on_actions();
   } else if (dialogue_counter === 50) {
     dialogue_pic.style.background = `url("../cyperhack/images/ui/leader.png)`;
@@ -149,10 +151,17 @@ function after_hack_lost() {
   dialogue_chat.value += `\n\n-Tap to continue >`;
 }
 
+function level_up_dialogue() {
+  dialogue_counter = 11;
+  dialogue_chat.value = '-No matter if you win or lose, you still gain experience from completed territory. ' +
+      '\nTap your image to choose upgrade for yourself. You can choose to boost your stats or get one more skill point. ';
+  dialogue_chat.value += `\n\n-Tap to continue >`;
+}
+
 function win_condition_true() {
   turn_off_actions();
 
-  dialogue_counter = 10;
+  dialogue_counter = 11;
   dialogue_chat.value = '-Amazing! You managed to hack three places without The Company finding us. ' +
       '\nFrom the  intel you gathered we know that The Company\'s boss is inside this tower. Go finish him and claim the control of the city back!';
   dialogue_chat.value += `\n\n-Tap to continue >`;

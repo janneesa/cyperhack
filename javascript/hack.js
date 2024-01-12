@@ -109,7 +109,10 @@ function back_to_map() {
       console.log('Error in player_location. value is not 1 or 0');
     }
   } finally {
+    // Check win con
     win_condition_check()
+    // Level up
+    level_up()
     console.log('win_con checked')
   }
 }

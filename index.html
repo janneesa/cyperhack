@@ -15,14 +15,15 @@
     <script src="../cyperhack/javascript/combat_skills.js" defer></script>
     <script src="../cyperhack/javascript/dialogue.js" defer></script>
     <link rel="manifest" href="../cyperhack/manifest.json" crossorigin="use-credentials">
-    <meta name="description" content="Cyperhack is student made game about fighting against evil corporation in a futuristic city.">
-    <meta name="keywords" content="cyperhack, cyper, hack, game, indie, hack, hacking" />
+    <meta name="description"
+          content="Cyperhack is student made game about fighting against evil corporation in a futuristic city.">
+    <meta name="keywords" content="cyperhack, cyper, hack, game, indie, hack, hacking"/>
     <meta name="theme-color" content="#8d0fa3"/>
     <title>cyperhack</title>
 </head>
- <audio controls autoplay loop>
-  <source src="../cyperhack/audio/melodic-techno-03-extended-version-moogify-9867.mp3" type="audio/ogg">
-Your browser does not support the audio element.
+<audio controls autoplay loop>
+    <source src="../cyperhack/audio/melodic-techno-03-extended-version-moogify-9867.mp3" type="audio/ogg">
+    Your browser does not support the audio element.
 </audio>
 <body>
 
@@ -36,6 +37,14 @@ Your browser does not support the audio element.
         <div id="dialogue-pic-friendly" class="dialogue-pic-friendly"></div>
     </div>
 </div>
+
+<div id="upgrade-container" class="upgrade-container">
+    <div id="button-row" class="button-row">
+        <button id="stat-upgrade" class="battle-button" onclick="stat_upgrade()">STAT</button>
+        <button id="skill-upgrade" class="battle-button" onclick="skill_upgrade()">SKILL</button>
+    </div>
+</div>
+
 
 <div class="container">
 
@@ -158,12 +167,21 @@ Your browser does not support the audio element.
             <button id="charge" class="battle-button" onclick="begin_charge()">CHARGE</button>
             <button id="heal" class="battle-button" onclick="heal()">HEAL</button>
             <button id="skills" class="battle-button" onclick="show_combat_skills()">SKILLS</button>
-            <button id="continue" class="battle-button" style="display: none" onclick="continue_fight()">CONTINUE</button>
+            <button id="continue" class="battle-button" style="display: none" onclick="continue_fight()">CONTINUE
+            </button>
 
-            <button id="assassin-backstab" class="battle-button skill-button" name="assassin" style="display: none" onclick="assassin_backstab()">BACKSTAB</button>
-            <button id="fighter-doublestrike" class="battle-button skill-button" name="fighter" style="display: none" onclick="fighter_double_strike()">DOUBLE STRIKE</button>
-            <button id="hacker-timestop" class="battle-button skill-button" name="hacker" style="display: none" onclick="hacker_time_stop()">STOP TIME</button>
-            <button id="tank-superheal" class="battle-button skill-button" name="tank" style="display: none" onclick="tank_super_heal()">SUPER HEAL</button>
+            <button id="assassin-backstab" class="battle-button skill-button" name="assassin" style="display: none"
+                    onclick="assassin_backstab()">BACKSTAB
+            </button>
+            <button id="fighter-doublestrike" class="battle-button skill-button" name="fighter" style="display: none"
+                    onclick="fighter_double_strike()">DOUBLE STRIKE
+            </button>
+            <button id="hacker-timestop" class="battle-button skill-button" name="hacker" style="display: none"
+                    onclick="hacker_time_stop()">STOP TIME
+            </button>
+            <button id="tank-superheal" class="battle-button skill-button" name="tank" style="display: none"
+                    onclick="tank_super_heal()">SUPER HEAL
+            </button>
 
             <button id="timestop" class="battle-button" style="display: none">STOP</button>
             <button id="return" class="battle-button" style="display: none" onclick="return_button()">RETURN</button>

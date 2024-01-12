@@ -40,12 +40,12 @@ audio {
 }
 
 @keyframes slide_from_left {
-  from {
-    transform: translateX(100%); /* Move the image outside the container to the left */
-  }
-  to {
-    transform: translateX(0); /* Bring the image back to its original position */
-  }
+    from {
+        transform: translateX(100%); /* Move the image outside the container to the left */
+    }
+    to {
+        transform: translateX(0); /* Bring the image back to its original position */
+    }
 }
 
 
@@ -330,6 +330,8 @@ progress::-webkit-progress-value {
 }
 
 .player-window {
+    display: flex;
+    flex-direction: column;
     width: 50%;
     height: 100%;
     background-image: url("../cyperhack/images/characters/hacker.png");
@@ -337,7 +339,12 @@ progress::-webkit-progress-value {
     background-repeat: no-repeat;
     background-position: center bottom;
     transition: filter 0.01s ease-in-out;
-    filter: pixelate(100px);
+    text-align: center;
+    justify-content: flex-end;
+    color: gold;
+    font-size: 8vh;
+    font-family: iceland, sans-serif;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
 }
 
 .enemy-window {
@@ -468,7 +475,7 @@ progress::-webkit-progress-value {
     flex-direction: row;
     position: absolute;
     bottom: 15vh;
-    height:60vh;
+    height: 60vh;
     width: 100vw;
     z-index: 998;
 }
@@ -645,4 +652,21 @@ progress::-webkit-progress-value {
     justify-content: space-evenly;
 }
 
+.upgrade-container {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.button-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
 
