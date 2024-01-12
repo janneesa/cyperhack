@@ -126,7 +126,7 @@ function first_hack() {
 }
 
 function first_hack_part2() {
-  dialogue_counter++;
+  dialogue_counter = 11;
   dialogue_chat.value = '-When hacking your cyber enhancements take over and try to hack automatically. ' +
       'You need three green lights for the hack to be successful. If you get 10 or more the box turns green. If you get less than 10 it turns red. Three red boxes before getting three green ones means you fail the hack. ' +
       'If you fail you can not harvest then energy from the location servers and you dont get health or skill point recharge. ';
