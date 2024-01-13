@@ -106,7 +106,8 @@ document.addEventListener('DOMContentLoaded', async function() {
   // Random images for places
   randomize_places();
 
-  lore_text.value = 'City is in danger help them';
+  lore_text.value = 'The Company has been in a long battle against the resistance. Recently enemy forces have been taking too much control and the city is falling into despair. ' +
+      'You have been called to help in the fight against The Company. Your mission is to fight and hack through enemy claimed territories and get intel about the enemy. Good Luck agent. ';
 });
 
 place_1.addEventListener('click', async function() {
