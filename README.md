@@ -10,8 +10,7 @@
 <br />
 
 <img src="(https://github.com/janneesa/cyperhack/assets/142724346/73498d15-7ed1-47dc-ab5b-619781c10ef5" width="100">
-![screenshot1](https://github.com/janneesa/cyperhack/assets/142724346/73498d15-7ed1-47dc-ab5b-619781c10ef5)
-![screenshot2](https://github.com/janneesa/cyperhack/assets/142724346/95e4ec4a-f7fe-41b9-b28d-195864293d6c)
+
 
 
 
