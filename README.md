@@ -1,6 +1,6 @@
 # Cyperhack - javascript game
 <br />Web browser game made with javascript and html. All art is made by AI
-<br />
+<br /><a> https://users.metropolia.fi/~janneesa/cyperhack/ >Try the game here< <a/>
 <br />
 <br /><b>Methods:</b>
 <ul>
