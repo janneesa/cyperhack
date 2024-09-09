@@ -5,7 +5,9 @@
 <br />
 <br /><b>Methods:</b>
 <ul>
-      <li>HTML, CSS, Javascript</li>
+      <li>HTML</li>
+      <li>JavaScript</li>
+      <li>CSS</li>
       <li>Fooocus AI</li>
 </ul>
 <br />
