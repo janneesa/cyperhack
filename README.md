@@ -15,11 +15,11 @@ Cyperhack is Cyperpunk inspired javascript game project. All the art was done wi
 Objective of the game is to beat enemies in turn based combat. Combat rules are inspired from DnD.
 
 <h2> Images </h2>
-<img width="252" alt="Cyperhack1" src="https://github.com/user-attachments/assets/922448cc-648d-4579-aeb0-36beea03b3c5">
-<img width="253" alt="Cyperhack2" src="https://github.com/user-attachments/assets/5982d911-5fed-4eca-bc0f-3093b776f3ca">
-<img width="253" alt="Cyperhack3" src="https://github.com/user-attachments/assets/9ee647ad-5341-4572-abc4-aee996652d40">
-<img width="253" alt="Cyperhack4" src="https://github.com/user-attachments/assets/38fede05-6313-4097-a9bf-119de7242a84">
-<img width="251" alt="Cyperhack5" src="https://github.com/user-attachments/assets/4ef74905-00c9-4377-81e4-dd0d7618f18c">
+<img width="211" alt="Cyperhack1" src="https://github.com/user-attachments/assets/922448cc-648d-4579-aeb0-36beea03b3c5">
+<img width="211" alt="Cyperhack2" src="https://github.com/user-attachments/assets/5982d911-5fed-4eca-bc0f-3093b776f3ca">
+<img width="211" alt="Cyperhack3" src="https://github.com/user-attachments/assets/9ee647ad-5341-4572-abc4-aee996652d40">
+<img width="211" alt="Cyperhack4" src="https://github.com/user-attachments/assets/38fede05-6313-4097-a9bf-119de7242a84">
+<img width="211" alt="Cyperhack5" src="https://github.com/user-attachments/assets/4ef74905-00c9-4377-81e4-dd0d7618f18c">
 
 
 <br /><b>Contributors:</b>
